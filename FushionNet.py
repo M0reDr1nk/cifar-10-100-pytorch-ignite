@@ -78,7 +78,7 @@ class FushionNet(nn.Module):
             nn.ELU()
         )
         self.drop_out = nn.Sequential(
-            nn.Dropout(0.1)#0.4
+            nn.Dropout(0.2)#0.4
         )
         self.fc = nn.Sequential(
             nn.Linear(1024, 10),
