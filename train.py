@@ -13,7 +13,7 @@ SAVE_PATH="./weights/"
 def run(train_batch_size, val_batch_size, epochs, lr, momentum, log_interval):
     train_loader, val_loader = get_data_loaders(train_batch_size, val_batch_size)
     model = FushionNet()
-    model=torch.load(SAVE_PATH+"350-0.908.pth")
+    #model=torch.load(SAVE_PATH+"350-0.908.pth")
 
 
     if torch.cuda.is_available():
@@ -82,7 +82,7 @@ if __name__ == "__main__":
                         help='input batch size for validation (default: 1000)')
     parser.add_argument('--epochs', type=int, default=360,
                         help='number of epochs to train (default: 10)')
-    parser.add_argument('--lr', type=float, default=1e-4,#0.2,
+    parser.add_argument('--lr', type=float, default=0.2,
                         help='learning rate (default: 0.01)')
     parser.add_argument('--momentum', type=float, default=0.9,
                         help='SGD momentum (default: 0.5)')
